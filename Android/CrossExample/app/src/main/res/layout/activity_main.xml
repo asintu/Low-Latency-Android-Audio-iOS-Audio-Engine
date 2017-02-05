@@ -1,63 +1,464 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/playPause"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:onClick="SuperpoweredExample_PlayPause"
-        android:text="PLAY" />
-
-    <SeekBar
-        android:id="@+id/crossFader"
+    tools:context=".MainActivity">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/playPause"
-        android:layout_marginTop="35dp" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/crossFader"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:orientation="horizontal" >
-
-        <RadioButton
-            android:id="@+id/radio0"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="FLANGER" />
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/radio1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="FILTER" />
+            <Button
+                android:id="@+id/playPauseAll"
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:onClick="SuperpoweredExample_PlayPauseAll"
+                android:text="PLAY" />
 
-        <RadioButton
-            android:id="@+id/radio2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ROLL" />
-    </RadioGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Master BPM: " />
 
-    <SeekBar
-        android:id="@+id/fxFader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/radioGroup1"
-        android:layout_marginTop="35dp" />
+            <EditText
+                android:id="@+id/masterBpm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/setMasterBpm"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="OK" />
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/player1View"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/player1PlayPauseButton"
+                        android:layout_width="71dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:onClick="SuperpoweredExample_PlayPause"
+                        android:text="PLAY" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Tempo " />
+
+                            <SeekBar
+                                android:id="@+id/player1TempoBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/playPause"
+                                android:layout_weight="98" />
+
+                            <TextView
+                                android:id="@+id/tempoValue"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="126" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/volumeText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Volume" />
+
+                            <SeekBar
+                                android:id="@+id/player1VolumeBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/playPause"
+                                android:layout_weight="98" />
+
+                            <TextView
+                                android:id="@+id/volumeValue"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="122" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/player2View"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/playButton2"
+                        android:layout_width="71dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:onClick="SuperpoweredExample_PlayPause2"
+                        android:text="PLAY" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tempo2Text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Tempo " />
+
+                            <SeekBar
+                                android:id="@+id/tempoBar2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/playPause"
+                                android:layout_weight="98" />
+
+                            <TextView
+                                android:id="@+id/tempoValue2"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="126" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/volumeText2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Volume" />
+
+                            <SeekBar
+                                android:id="@+id/volumeBar2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/playPause"
+                                android:layout_weight="98" />
+
+                            <TextView
+                                android:id="@+id/volumeValue2"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="122" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/player3View"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/playButton3"
+                        android:layout_width="71dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:onClick="SuperpoweredExample_PlayPause3"
+                        android:text="PLAY" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tempo3Text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Tempo " />
+
+                            <SeekBar
+                                android:id="@+id/tempoBar3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/playPause"
+                                android:layout_weight="98" />
+
+                            <TextView
+                                android:id="@+id/tempoValue3"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="126" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/volumeText3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Volume" />
+
+                            <SeekBar
+                                android:id="@+id/volumeBar3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/playPause"
+                                android:layout_weight="98" />
+
+                            <TextView
+                                android:id="@+id/volumeValue3"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="122" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/player4View"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/playButton4"
+                        android:layout_width="71dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:onClick="SuperpoweredExample_PlayPause4"
+                        android:text="PLAY" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tempo4Text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Tempo " />
+
+                            <SeekBar
+                                android:id="@+id/tempoBar4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/playPause"
+                                android:layout_weight="98" />
+
+                            <TextView
+                                android:id="@+id/tempoValue4"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="126" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/volumeText4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Volume" />
+
+                            <SeekBar
+                                android:id="@+id/volumeBar4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/playPause"
+                                android:layout_weight="98" />
+
+                            <TextView
+                                android:id="@+id/volumeValue4"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="122" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/player5View"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/playButton5"
+                        android:layout_width="71dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:onClick="SuperpoweredExample_PlayPause5"
+                        android:text="PLAY" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tempo5Text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Tempo " />
+
+                            <SeekBar
+                                android:id="@+id/tempoBar5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/playPause"
+                                android:layout_weight="98" />
+
+                            <TextView
+                                android:id="@+id/tempoValue5"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="126" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/volumeText5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Volume" />
+
+                            <SeekBar
+                                android:id="@+id/volumeBar5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/playPause"
+                                android:layout_weight="98" />
+
+                            <TextView
+                                android:id="@+id/volumeValue5"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="122" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 
 </RelativeLayout>

@@ -116,8 +116,8 @@ static bool audioProcessing(void *clientdata, float **buffers, unsigned int inpu
     playerB->onMediaserverInterrupt();
 }
 
-- (IBAction)onPlayPause:(id)sender {
-    UIButton *button = (UIButton *)sender;
+- (void)onPlayPause {
+    //UIButton *button = (UIButton *)sender;
     if (playerA->playing) {
         playerA->pause();
         playerB->pause();
@@ -126,7 +126,7 @@ static bool audioProcessing(void *clientdata, float **buffers, unsigned int inpu
         playerA->play(!masterIsA);
         playerB->play(masterIsA);
     };
-    button.selected = playerA->playing;
+    //button.selected = playerA->playing;
 }
 
 - (IBAction)onCrossFader:(id)sender {

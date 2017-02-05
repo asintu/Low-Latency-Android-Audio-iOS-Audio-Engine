@@ -2,46 +2,46 @@
 {
 	"buildFiles" : 
 	[
-		"/Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/src/main/jni/CMakeLists.txt"
+		"/Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/src/main/jni/CMakeLists.txt"
 	],
 	"cleanCommands" : 
 	[
-		"/android/sdk/cmake/3.6.3155560/bin/cmake --build /Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/.externalNativeBuild/cmake/release/armeabi-v7a --target clean"
+		"/Users/bruno/Library/Android/sdk/cmake/3.6.3155560/bin/cmake --build /Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/.externalNativeBuild/cmake/release/armeabi-v7a --target clean"
 	],
 	"cppFileExtensions" : [ "cpp" ],
 	"libraries" : 
 	{
-		"SuperpoweredExample-Release-armeabi-v7a" : 
+		"SuperpoweredPlayer-Release-armeabi-v7a" : 
 		{
 			"abi" : "armeabi-v7a",
-			"artifactName" : "SuperpoweredExample",
-			"buildCommand" : "/android/sdk/cmake/3.6.3155560/bin/cmake --build /Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/.externalNativeBuild/cmake/release/armeabi-v7a --target SuperpoweredExample",
+			"artifactName" : "SuperpoweredPlayer",
+			"buildCommand" : "/Users/bruno/Library/Android/sdk/cmake/3.6.3155560/bin/cmake --build /Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/.externalNativeBuild/cmake/release/armeabi-v7a --target SuperpoweredPlayer",
 			"buildType" : "release",
 			"files" : 
 			[
 				
 				{
-					"flags" : "  -target armv7-none-linux-androideabi -gcc-toolchain /android/ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/android/ndk/platforms/android-16/arch-arm  -DSuperpoweredExample_EXPORTS -I/Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/src/main/jni/src/main/jni -I/Volumes/iMect/iphone/SuperpoweredSDK/Superpowered -isystem /android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -fsigned-char -I/Volumes/iMect/iphone/SuperpoweredSDK/Superpowered -Os -DNDEBUG -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "/Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/src/main/jni/SuperpoweredExample.cpp",
-					"workingDirectory" : "/Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  -target armv7-none-linux-androideabi -gcc-toolchain /Users/bruno/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/bruno/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm  -DSuperpoweredPlayer_EXPORTS -I/Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/src/main/jni/src/main/jni -I/Library/SuperpoweredSDK -isystem /Users/bruno/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/bruno/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /Users/bruno/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -fsigned-char -I/Library/SuperpoweredSDK -Os -DNDEBUG -Os -DNDEBUG  -fPIC    -c ",
+					"src" : "/Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/src/main/jni/SuperpoweredPlayer.cpp",
+					"workingDirectory" : "/Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  -target armv7-none-linux-androideabi -gcc-toolchain /android/ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/android/ndk/platforms/android-16/arch-arm  -DSuperpoweredExample_EXPORTS -I/Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/src/main/jni/src/main/jni -I/Volumes/iMect/iphone/SuperpoweredSDK/Superpowered -isystem /android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -fsigned-char -I/Volumes/iMect/iphone/SuperpoweredSDK/Superpowered -Os -DNDEBUG -Os -DNDEBUG  -fPIC    -c ",
-					"src" : "/Volumes/iMect/iphone/SuperpoweredSDK/Superpowered/AndroidIO/SuperpoweredAndroidAudioIO.cpp",
-					"workingDirectory" : "/Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  -target armv7-none-linux-androideabi -gcc-toolchain /Users/bruno/Library/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/bruno/Library/Android/sdk/ndk-bundle/platforms/android-16/arch-arm  -DSuperpoweredPlayer_EXPORTS -I/Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/src/main/jni/src/main/jni -I/Library/SuperpoweredSDK -isystem /Users/bruno/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/bruno/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/include -isystem /Users/bruno/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -mfpu=neon -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -fsigned-char -I/Library/SuperpoweredSDK -Os -DNDEBUG -Os -DNDEBUG  -fPIC    -c ",
+					"src" : "/Library/SuperpoweredSDK/AndroidIO/SuperpoweredAndroidAudioIO.cpp",
+					"workingDirectory" : "/Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/.externalNativeBuild/cmake/release/armeabi-v7a"
 				}
 			],
-			"output" : "/Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/build/intermediates/cmake/release/obj/armeabi-v7a/libSuperpoweredExample.so",
-			"toolchain" : "15660216537762243581"
+			"output" : "/Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/build/intermediates/cmake/release/obj/armeabi-v7a/libSuperpoweredPlayer.so",
+			"toolchain" : "4828858917891477483"
 		}
 	},
 	"toolchains" : 
 	{
-		"15660216537762243581" : 
+		"4828858917891477483" : 
 		{
-			"cCompilerExecutable" : "/android/ndk/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
-			"cppCompilerExecutable" : "/android/ndk/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+			"cCompilerExecutable" : "/Users/bruno/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/bruno/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
 		}
 	}
 }

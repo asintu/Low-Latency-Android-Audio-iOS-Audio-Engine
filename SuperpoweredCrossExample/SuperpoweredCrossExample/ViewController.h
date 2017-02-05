@@ -2,7 +2,7 @@
 
 @interface ViewController: UIViewController
 
-- (IBAction)onPlayPause:(id)sender;
+- (IBAction)onPlayPause;
 - (IBAction)onCrossFader:(id)sender;
 - (IBAction)onFxOff:(id)sender;
 - (IBAction)onFxValue:(id)sender;

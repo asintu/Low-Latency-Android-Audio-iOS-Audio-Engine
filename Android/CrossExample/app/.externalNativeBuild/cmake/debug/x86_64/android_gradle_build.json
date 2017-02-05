@@ -2,46 +2,46 @@
 {
 	"buildFiles" : 
 	[
-		"/Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/src/main/jni/CMakeLists.txt"
+		"/Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/src/main/jni/CMakeLists.txt"
 	],
 	"cleanCommands" : 
 	[
-		"/android/sdk/cmake/3.6.3155560/bin/cmake --build /Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/.externalNativeBuild/cmake/debug/x86_64 --target clean"
+		"/Users/bruno/Library/Android/sdk/cmake/3.6.3155560/bin/cmake --build /Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/.externalNativeBuild/cmake/debug/x86_64 --target clean"
 	],
 	"cppFileExtensions" : [ "cpp" ],
 	"libraries" : 
 	{
-		"SuperpoweredExample-Debug-x86_64" : 
+		"SuperpoweredPlayer-Debug-x86_64" : 
 		{
 			"abi" : "x86_64",
-			"artifactName" : "SuperpoweredExample",
-			"buildCommand" : "/android/sdk/cmake/3.6.3155560/bin/cmake --build /Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/.externalNativeBuild/cmake/debug/x86_64 --target SuperpoweredExample",
+			"artifactName" : "SuperpoweredPlayer",
+			"buildCommand" : "/Users/bruno/Library/Android/sdk/cmake/3.6.3155560/bin/cmake --build /Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/.externalNativeBuild/cmake/debug/x86_64 --target SuperpoweredPlayer",
 			"buildType" : "debug",
 			"files" : 
 			[
 				
 				{
-					"flags" : "  -target x86_64-none-linux-android -gcc-toolchain /android/ndk/toolchains/x86_64-4.9/prebuilt/darwin-x86_64 --sysroot=/android/ndk/platforms/android-21/arch-x86_64  -DSuperpoweredExample_EXPORTS -I/Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/src/main/jni/src/main/jni -I/Volumes/iMect/iphone/SuperpoweredSDK/Superpowered -isystem /android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86_64/include -isystem /android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -fsigned-char -I/Volumes/iMect/iphone/SuperpoweredSDK/Superpowered -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
-					"src" : "/Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/src/main/jni/SuperpoweredExample.cpp",
-					"workingDirectory" : "/Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/.externalNativeBuild/cmake/debug/x86_64"
+					"flags" : "  -target x86_64-none-linux-android -gcc-toolchain /Users/bruno/Library/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/bruno/Library/Android/sdk/ndk-bundle/platforms/android-21/arch-x86_64  -DSuperpoweredPlayer_EXPORTS -I/Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/src/main/jni/src/main/jni -I/Library/SuperpoweredSDK -isystem /Users/bruno/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/bruno/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86_64/include -isystem /Users/bruno/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -fsigned-char -I/Library/SuperpoweredSDK -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/src/main/jni/SuperpoweredPlayer.cpp",
+					"workingDirectory" : "/Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/.externalNativeBuild/cmake/debug/x86_64"
 				},
 				
 				{
-					"flags" : "  -target x86_64-none-linux-android -gcc-toolchain /android/ndk/toolchains/x86_64-4.9/prebuilt/darwin-x86_64 --sysroot=/android/ndk/platforms/android-21/arch-x86_64  -DSuperpoweredExample_EXPORTS -I/Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/src/main/jni/src/main/jni -I/Volumes/iMect/iphone/SuperpoweredSDK/Superpowered -isystem /android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86_64/include -isystem /android/ndk/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -fsigned-char -I/Volumes/iMect/iphone/SuperpoweredSDK/Superpowered -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
-					"src" : "/Volumes/iMect/iphone/SuperpoweredSDK/Superpowered/AndroidIO/SuperpoweredAndroidAudioIO.cpp",
-					"workingDirectory" : "/Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/.externalNativeBuild/cmake/debug/x86_64"
+					"flags" : "  -target x86_64-none-linux-android -gcc-toolchain /Users/bruno/Library/Android/sdk/ndk-bundle/toolchains/x86_64-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/bruno/Library/Android/sdk/ndk-bundle/platforms/android-21/arch-x86_64  -DSuperpoweredPlayer_EXPORTS -I/Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/src/main/jni/src/main/jni -I/Library/SuperpoweredSDK -isystem /Users/bruno/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include -isystem /Users/bruno/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86_64/include -isystem /Users/bruno/Library/Android/sdk/ndk-bundle/sources/cxx-stl/gnu-libstdc++/4.9/include/backward  -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -fno-exceptions -fno-rtti -fsigned-char -I/Library/SuperpoweredSDK -O0 -fno-limit-debug-info -O0 -fno-limit-debug-info  -fPIC    -c ",
+					"src" : "/Library/SuperpoweredSDK/AndroidIO/SuperpoweredAndroidAudioIO.cpp",
+					"workingDirectory" : "/Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/.externalNativeBuild/cmake/debug/x86_64"
 				}
 			],
-			"output" : "/Volumes/iMect/iphone/SuperpoweredSDK/Android/CrossExample/app/build/intermediates/cmake/debug/obj/x86_64/libSuperpoweredExample.so",
-			"toolchain" : "15660216537762243581"
+			"output" : "/Users/bruno/workspace/Low-Latency-Android-Audio-iOS-Audio-Engine/Android/CrossExample/app/build/intermediates/cmake/debug/obj/x86_64/libSuperpoweredPlayer.so",
+			"toolchain" : "4828858917891477483"
 		}
 	},
 	"toolchains" : 
 	{
-		"15660216537762243581" : 
+		"4828858917891477483" : 
 		{
-			"cCompilerExecutable" : "/android/ndk/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
-			"cppCompilerExecutable" : "/android/ndk/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+			"cCompilerExecutable" : "/Users/bruno/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/bruno/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
 		}
 	}
 }
