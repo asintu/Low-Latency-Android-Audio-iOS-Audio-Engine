@@ -132,6 +132,8 @@ SuperpoweredPlayer::SuperpoweredPlayer(unsigned int sampleRate, unsigned int buf
     started = false;
     stereoBuffer = (float *)memalign(16, (bufferSize + 16) * sizeof(float) * 2);
     player = new SuperpoweredAdvancedAudioPlayer(&player, playerEventCallback, sampleRate, 0);
+    player->minTimeStretchingTempo = 0.0;
+    player->maxTimeStretchingTempo = 10.0;
     player->open(path, fileOffset, fileLength);
     player->syncMode = SuperpoweredAdvancedAudioPlayerSyncMode_TempoAndBeat;
 
@@ -147,6 +149,8 @@ void SuperpoweredPlayer::openPlayer2(unsigned int sampleRate, unsigned int buffe
     started2 = false;
     //stereoBuffer2 = (float *)memalign(16, (bufferSize + 16) * sizeof(float) * 2);
     player2 = new SuperpoweredAdvancedAudioPlayer(&player2, playerEventCallback2, sampleRate, 0);
+    player2->minTimeStretchingTempo = 0.0;
+    player2->maxTimeStretchingTempo = 10.0;
     player2->open(path, fileOffset, fileLength);
     player2->syncMode = SuperpoweredAdvancedAudioPlayerSyncMode_TempoAndBeat;
     //audioSystem2 = new SuperpoweredAndroidAudioIO(sampleRate, bufferSize, false, true, audioProcessing2, this, -1, SL_ANDROID_STREAM_MEDIA, bufferSize * 2);
@@ -157,6 +161,8 @@ void SuperpoweredPlayer::openPlayer3(unsigned int sampleRate, unsigned int buffe
     started3 = false;
     //stereoBuffer3 = (float *)memalign(16, (bufferSize + 16) * sizeof(float) * 2);
     player3 = new SuperpoweredAdvancedAudioPlayer(&player3, playerEventCallback3, sampleRate, 0);
+    player3->minTimeStretchingTempo = 0.0;
+    player3->maxTimeStretchingTempo = 10.0;
     player3->open(path, fileOffset, fileLength);
     player3->syncMode = SuperpoweredAdvancedAudioPlayerSyncMode_TempoAndBeat;
     //audioSystem3 = new SuperpoweredAndroidAudioIO(sampleRate, bufferSize, false, true, audioProcessing3, this, -1, SL_ANDROID_STREAM_MEDIA, bufferSize * 2);
@@ -167,8 +173,11 @@ void SuperpoweredPlayer::openPlayer4(unsigned int sampleRate, unsigned int buffe
     started4 = false;
     //stereoBuffer4 = (float *)memalign(16, (bufferSize + 16) * sizeof(float) * 2);
     player4 = new SuperpoweredAdvancedAudioPlayer(&player4, playerEventCallback4, sampleRate, 0);
+    player4->minTimeStretchingTempo = 0.0;
+    player4->maxTimeStretchingTempo = 10.0;
     player4->open(path, fileOffset, fileLength);
     player4->syncMode = SuperpoweredAdvancedAudioPlayerSyncMode_TempoAndBeat;
+
     //audioSystem4 = new SuperpoweredAndroidAudioIO(sampleRate, bufferSize, false, true, audioProcessing4, this, -1, SL_ANDROID_STREAM_MEDIA, bufferSize * 2);
 }
 
@@ -177,6 +186,8 @@ void SuperpoweredPlayer::openPlayer5(unsigned int sampleRate, unsigned int buffe
     started5 = false;
     //stereoBuffer5 = (float *)memalign(16, (bufferSize + 16) * sizeof(float) * 2);
     player5 = new SuperpoweredAdvancedAudioPlayer(&player5, playerEventCallback5, sampleRate, 0);
+    player5->minTimeStretchingTempo = 0.0;
+    player5->maxTimeStretchingTempo = 10.0;
     player5->open(path, fileOffset, fileLength);
     player5->syncMode = SuperpoweredAdvancedAudioPlayerSyncMode_TempoAndBeat;
     //audioSystem5 = new SuperpoweredAndroidAudioIO(sampleRate, bufferSize, false, true, audioProcessing5, this, -1, SL_ANDROID_STREAM_MEDIA, bufferSize * 2);
